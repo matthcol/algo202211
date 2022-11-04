@@ -28,8 +28,17 @@ function build(n){
     let i = 0
     let j = (n - 1) / 2
     for(let nb = 1; nb <= n**2; nb++) {
-        console.log("Placer le nombre", nb)
+        // console.log("Placer le nombre", nb)
         square[i][j] = nb
+        // move in L
+        let i2 = (i + 2) % n
+        let j2 = (j + 1) % n
+        if (square[i2][j2] != 0) {
+            i2 = (i + 1) % n
+            j2 = j
+        }
+        i = i2
+        j = j2
     }
     return square
 }
@@ -65,4 +74,5 @@ const koC = isMagic(squareKoColumn)
 const koD = isMagic(squareKoDiag)
 console.log("squares ko", koR, koC, koD)
 
-square3 = build(3)
+const square3 = build(3)
+console.log(square3)
