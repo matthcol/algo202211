@@ -20,10 +20,17 @@ function isMagic(square){
 }
 
 function build(n){
+    // 1. create empty square
     let square = Array(n).fill(new Array(n).fill(0))
-
-    // TODO: fill square with numbers from 1 to n^2
-
+    
+    // 2. fill square with numbers from 1 to n^2
+    // start position
+    let i = 0
+    let j = (n - 1) / 2
+    for(let nb = 1; nb <= n**2; nb++) {
+        console.log("Placer le nombre", nb)
+        square[i][j] = nb
+    }
     return square
 }
 
@@ -57,3 +64,5 @@ const koR = isMagic(squareKoRow)
 const koC = isMagic(squareKoColumn)
 const koD = isMagic(squareKoDiag)
 console.log("squares ko", koR, koC, koD)
+
+square3 = build(3)
