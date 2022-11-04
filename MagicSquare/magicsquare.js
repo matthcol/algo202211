@@ -20,8 +20,11 @@ function isMagic(square){
 }
 
 function build(n){
-    return [[1, 1], 
-            [1, 2]]
+    let square = Array(n).fill(new Array(n).fill(0))
+
+    // TODO: fill square with numbers from 1 to n^2
+
+    return square
 }
 
 const squareOk = 
