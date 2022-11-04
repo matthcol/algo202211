@@ -1,10 +1,22 @@
 function isMagic(square){
+    const n = square.length
     // 1. compute magical sum: n(n^2+1)/2
+    const magicSum = n*(n**2+1)/2
     // 2. check each row
+    for (let row of square) {
+        let sum = 0
+        // compute sum of this row
+        for (let v of row){
+            sum += v
+        }
+        if (sum != magicSum) {
+            return false
+        }
+    }
     // 3. check each column
     // 4. les "diagonales"
     // TODO 5. use all numbers from 1 to n^2 (once each)
-    return false
+    return true
 }
 
 function build(n){
