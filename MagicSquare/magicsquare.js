@@ -21,7 +21,7 @@ function isMagic(square){
 
 function build(n){
     // 1. create empty square
-    let square = Array(n).fill(new Array(n).fill(0))
+    let square = Array.from(Array(n), () => new Array(n).fill(0))
     
     // 2. fill square with numbers from 1 to n^2
     // start position
