@@ -1,16 +1,22 @@
 // algorithme d'Euclide
 // https://fr.wikipedia.org/wiki/Algorithme_d%27Euclide
-let a = 21
-let b = 15
 
-
-// calculer le pgcd
-while (a !=b) {
-    if (a>b) {
-        a = a -b
-    } else {
-        b = b -a
-    }    
+/**
+ * compute greatest common divider of two natural numbers a and b
+ * (original Euclide version)
+ * @param {number} a 
+ * @param {number} b 
+ * @returns {number} greatest common divider
+ */
+function gcd(a, b) {
+    while (a !=b) {
+        if (a>b) {
+            a = a -b
+        } else {
+            b = b -a
+        }    
+    }
+    return a
 }
 
-console.log("Le pgcd est: ", a)
+module.exports = gcd
