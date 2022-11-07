@@ -1,10 +1,10 @@
 # Logique
 
 ## Théorème de De Morgan
-not(a and b) = (not a) or (not b)
-not(a or b) = (not a) and (not b)
+- not(a and b) = (not a) or (not b)
+- not(a or b) = (not a) and (not b)
 
-- Proof:
+Proof:
 
 |a|b|not a|not b|a and b|not(a and b)|(not a) or (not b)|
 |-|-|-----|-----|-------|------------|------------------|
